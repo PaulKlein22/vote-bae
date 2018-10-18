@@ -31,6 +31,8 @@ nav {
 body {
     margin: 0;
     padding: 0;
+background-image: url("./assets/starsback.jpg");
+background-color: #cccccc;
 }
 
 nav {
