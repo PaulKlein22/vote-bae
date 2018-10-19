@@ -1,6 +1,15 @@
 .card-header {
     text-align: center;
     font-size: 18px;
+    background-color: lightblue;
+}
+
+.card-body {
+    font-family: 'Lobster', cursive;
+}
+
+#welcomeText {
+    background-color: #f18585;
 }
 
 nav {
@@ -9,11 +18,12 @@ nav {
 
 .form-row {
     width: 700px;
+    color: #fff;
 }
 
 .form-group {
     width: 700px;
-    ;
+    color: #fff;
 }
 
 .btn-primary {
@@ -22,6 +32,7 @@ nav {
 
 .card-title {
     text-align: center;
+    color: #001f44;
 }
 
 .btn-primary {
@@ -31,8 +42,8 @@ nav {
 body {
     margin: 0;
     padding: 0;
-background-image: url("./assets/starsback.jpg");
-background-color: #cccccc;
+    background-image: url("./assets/starsback.jpg");
+    background-color: #cccccc;
 }
 
 nav {
