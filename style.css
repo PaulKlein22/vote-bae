@@ -16,9 +16,15 @@ nav {
     width: 100%;
 }
 
+#voterDiv{
+    background-image: url("./assets/starsback.jpg");
+    border: 0;
+}
+
 .form-row {
     width: 700px;
     color: #fff;
+   
 }
 
 .form-group {
@@ -32,7 +38,7 @@ nav {
 
 .card-title {
     text-align: center;
-    color: #001f44;
+    color:white;
 }
 
 .btn-primary {
