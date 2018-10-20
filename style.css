@@ -8,6 +8,11 @@
     font-family: 'Nova Round', cursive;
 }
 
+#submitButton {
+    text-align: center;
+    margin: 0 auto;
+}
+
 #welcomeText {
     background-color: #f18585;
 }
@@ -16,7 +21,7 @@ nav {
     width: 100%;
 }
 
-#voterDiv{
+#voterDiv {
     background-image: url("./assets/starsback.jpg");
     border: 0;
 }
@@ -24,7 +29,6 @@ nav {
 .form-row {
     width: 700px;
     color: #fff;
-   
 }
 
 .form-group {
@@ -38,7 +42,7 @@ nav {
 
 .card-title {
     text-align: center;
-    color:white;
+    color: white;
 }
 
 .btn-primary {
@@ -51,7 +55,6 @@ body,
     padding: 0;
     background-image: url("./assets/starsback.jpg");
     font-family: 'Nova Round', cursive;
-    
 }
 
 nav {
