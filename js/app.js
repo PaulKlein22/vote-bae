@@ -1,10 +1,26 @@
+
+var address = $("#geoCode").val().trim();
+
+
 function loadClient() {
+    var APIkey = "AIzaSyDaojct9_XgY_XfEgjZ8LTZOaFyk_mJEDc";
     gapi.client.setApiKey("AIzaSyDaojct9_XgY_XfEgjZ8LTZOaFyk_mJEDc");
     return gapi.client.load("https://content.googleapis.com/discovery/v1/apis/civicinfo/v2/rest")
         .then(function () { console.log("GAPI client loaded for API"); 
         // event.preventDefault();
     })
         .catch(function (err) { console.error("Error loading GAPI client for API", err); });
+    
+
+        
+        var queryURL = "https://www.googleapis.com/civicinfo/v2/voterinfo?address" + address + APIkey
+
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+            }).then(function(response) {
+            console.log(response);
+        });
 }
 // Make sure the client is loaded before calling this method.
 function execute() {
@@ -20,12 +36,18 @@ function execute() {
 }
 gapi.load("client");
 
-$("#submitButton").on("click", function(event){
-    event.preventDefault();
-    console.log("submit button clicked");
-    loadClient();
-    execute();
-});
+$("#submitButton").on("click", loadClient);
+$("#submitButton").on("click", execute);
 
-// $("#submitButton").on("click", loadClient);
-// $("#submitButton").on("click", execute);
+
+
+
+
+// $("#submitButton").on("click", function(event){
+//     event.preventDefault();
+//     console.log("submit button clicked");
+//     loadClient();
+//     execute();
+// });
+
+
