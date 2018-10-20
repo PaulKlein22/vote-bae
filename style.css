@@ -103,3 +103,19 @@ ul li a {
 .active {
     display: block;
 }
+
+/* #map {
+    /* float: left; */
+    /* position: fixed; */
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  } */
+  /* #content-window {
+    float: left;
+    font-family: 'Roboto','sans-serif';
+    height: 100%;
+    line-height: 30px;
+    padding-left: 10px;
+    width: 19%;
+  } */

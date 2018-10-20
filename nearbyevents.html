@@ -7,10 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="maps.css">
     <title>Events</title>
 </head>
 
-<body>
+<!-- <body>
 
     <div class="card">
         <div class="card-header">
@@ -36,16 +37,168 @@
                             Day</a>
                     </li>
                 </ul>
-            </div>
+            </div> -->
+
+            <!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #map {
+        height: 400px;  
+        width: 50%;  
+       }
+    </style>
+  </head>
+  <body>
+        <div class="card">
+                <div class="card-header">
+                    VoteBae
+                </div>
+                <div class="card text-center">
+                    <div class="card-header">
+                        <ul class="nav nav-tabs card-header-tabs">
+                            <li class="nav-item">
+                                <a><img src="./assets/VoteBae.jpg" width="80" href="index.html" height="80" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+        
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Nearby Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="planmyvoteday.html">Plan
+                                    My Vote
+                                    Day</a>
+                            </li>
+                        </ul>
+                    </div>
+        
+    
+    <div id="map"></div>
+    <script>
+          
+  
+    //CENTERED MAP AROUND CHICAGO 
+console.log("hello");
+    function initMap() {
+      console.log("centered map");
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 13,
+        center: { lng: -87.618, lat: 41.896 }
+      });
+      var geocoder = new google.maps.Geocoder();
+
+      document.getElementById('map').addEventListener('click', function () {
+        geocodeAddress(geocoder, map);
+      });
+
+      //GEOCODE ADDRESS 
+      console.log("here")
+
+      function geocodeAddress(geocoder, resultsMap) {
+        console.log("geoCode")
+
+        var address = document.getElementById('address').value;
+        console.log('address');
+        geocoder.geoCode({ 'address': address }, function (results, status) {
+          if (status === 'OK') {
+            console.log("stauts ok")
+            resultsMap.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+              map: resultsMap,
+              position: results[0].geometry.location
+            });
+          } else {
+            console.log('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+      }
+
+      //CTA LAYER 
+
+      var transitLayer = new google.maps.TransitLayer();
+      transitLayer.setMap(map);
 
 
-            <div class="container">
-                <div class="row">
+
+      //EVENT MARKERS 
+      
+      console.log("event");
+      var myLatLng = { lat: 41.905545, lng: -87.626710 };
+      var myLatLng2 = { lat: 41.890548, lng: -87.627286 };
+      var myLatLng3 = { lat: 41.890603, lng: -87.65 };
+      var pollingPlace = { lat: 41.889, lng: -87.627286 };
+      //  var APIKey = "AIzaSyDaojct9_XgY_XfEgjZ8LTZOaFyk_mJEDc";
+      // var queryURL = "https://www.googleapis.com/civicinfo/v2/voterinfo" + APIKey ;
+      //      $.ajax({
+      //    url: queryURL,
+      //     method: "GET"
+      //     }).then(function(response) {
+      //     console.log(queryURL); 
+      //   console.log(response);
+      //     var contentString = response;
+
+      var contentString = "fbrfbskjnd";
+
+
+      var infowindow = new google.maps.InfoWindow({
+        content: contentString
+      });
+
+
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'event 1',
+        icon: 'http://maps.google.com/mapfiles/ms/icons/purple-dot.png',
+
+      });
+      var marker2 = new google.maps.Marker({
+        position: myLatLng2,
+        map: map,
+        title: 'event 2',
+        icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+
+      });
+      var marker3 = new google.maps.Marker({
+        position: myLatLng3,
+        map: map,
+        title: 'event 2',
+        icon: 'http://maps.google.com/mapfiles/ms/icons/orange-dot.png',
+
+      });
+      var pollingPlace = new google.maps.Marker({
+        position: pollingPlace,
+        map: map,
+        title: 'Polling Place',
+        icon: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
+
+
+      });
+      marker.addListener('click', function () {
+        infowindow.open(map, marker);
+      });
+    }
+
+    </script>
+
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUJHBoYX51fGmAfp6vKcVMxbNtQFPExZc&callback=initMap">
+</script>
+  </body>
+</html>
+
+                   <!-- <div id="map" ></div>
+                     -->
+                <!-- <div class="row">
                     <div class="col-sml-6">
                         <h1>Polling Place Map</h1> <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
                         consequatur sint placeat nesciunt perferendis iure at, sunt quam similique rerum nulla iste a
                         numquam quibusdam quis optio aut dignissimos.
                         Deleniti.
+                    
                     </div>
                     <div class="col-sml-6">
                         <h1>List of Events</h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
@@ -56,9 +209,13 @@
                             <li>cool Event</li>
                             <li>neat Event</li>
                             <li>dope event</li>
-                        </ul>
-                    </div>
-                </div>
-</body>
+                        </ul> -->
+        <!-- </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="maps.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUJHBoYX51fGmAfp6vKcVMxbNtQFPExZc&callback=initMap">
+        </script>
+</body> -->
 
 </html>
