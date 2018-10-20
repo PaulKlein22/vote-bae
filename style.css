@@ -45,7 +45,8 @@ nav {
     margin-left: 300px;
 }
 
-body {
+body,
+#body {
     margin: 0;
     padding: 0;
     background-image: url("./assets/starsback.jpg");
