@@ -10,11 +10,12 @@ console.log("hello");
       });
       var geocoder = new google.maps.Geocoder();
 
-      document.getElementById('geoCode').addEventListener('click', function () {
+      document.getElementById('map').addEventListener('click', function () {
         geocodeAddress(geocoder, map);
       });
 
       //GEOCODE ADDRESS 
+      console.log("here")
 
       function geocodeAddress(geocoder, resultsMap) {
         console.log("geoCode")
@@ -23,13 +24,15 @@ console.log("hello");
         console.log('address');
         geocoder.geoCode({ 'address': address }, function (results, status) {
           if (status === 'OK') {
+            console.log("stauts ok")
             resultsMap.setCenter(results[0].geometry.location);
             var marker = new google.maps.Marker({
               map: resultsMap,
               position: results[0].geometry.location
             });
           } else {
-            alert('Geocode was not successful for the following reason: ' + status);
+            // alert('Geocode was not successful for the following reason: ' + status);
+            console.log('Geocode was not successful for the following reason: ' + status);
           }
         });
       }
