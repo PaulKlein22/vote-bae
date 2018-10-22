@@ -60,13 +60,13 @@
     <script>
 
 
-      //CENTERED MAP AROUND CHICAGO 
+      //CENTERED MAP AROUND LA 
       console.log("hello");
       function initMap() {
         console.log("centered map");
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 13,
-          center: { lng: -87.618, lat: 41.896 }
+          center: { lng: -118.467372, lat: 34.073661 }
         });
         var geocoder = new google.maps.Geocoder();
 
@@ -106,10 +106,12 @@
         //EVENT MARKERS 
 
         console.log("event");
-        var myLatLng = { lat: 41.905545, lng: -87.626710 };
-        var myLatLng2 = { lat: 41.890548, lng: -87.627286 };
-        var myLatLng3 = { lat: 41.890603, lng: -87.65 };
-        var pollingPlace = { lat: 41.889, lng: -87.627286 };
+        var myLatLng = { lat: 34.074016, lng: -118.464304 };
+        var myLatLng2 = { lat: 34.060403, lng: -118.458310 };
+        var myLatLng3 = { lat: 34.068259, lng: -118.443221 };
+        var myLatLng4 = { lat: 34.061212, lng: -118.468482 };
+        var myLatLng5 = { lat: 34.069841, lng: -118.455283 };
+        var pollingPlace = { lat: 34.072988, lng: -118.468685 };
         //  var APIKey = "AIzaSyDaojct9_XgY_XfEgjZ8LTZOaFyk_mJEDc";
         // var queryURL = "https://www.googleapis.com/civicinfo/v2/voterinfo" + APIKey ;
         //      $.ajax({
@@ -144,8 +146,22 @@
         var marker3 = new google.maps.Marker({
           position: myLatLng3,
           map: map,
-          title: 'event 2',
+          title: 'event 3',
           icon: 'http://maps.google.com/mapfiles/ms/icons/orange-dot.png',
+
+        });
+        var marker4 = new google.maps.Marker({
+          position: myLatLng4,
+          map: map,
+          title: 'event 4',
+          icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+
+        });
+        var marker5 = new google.maps.Marker({
+          position: myLatLng5,
+          map: map,
+          title: 'event 5',
+          icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
 
         });
         var pollingPlace = new google.maps.Marker({
