@@ -1,53 +1,36 @@
-
-var address = $("#geoCode").val().trim();
-
-
 function loadClient() {
     var APIkey = "AIzaSyDaojct9_XgY_XfEgjZ8LTZOaFyk_mJEDc";
-    gapi.client.setApiKey("AIzaSyDaojct9_XgY_XfEgjZ8LTZOaFyk_mJEDc");
-    return gapi.client.load("https://content.googleapis.com/discovery/v1/apis/civicinfo/v2/rest")
-        .then(function () { console.log("GAPI client loaded for API"); 
-        // event.preventDefault();
-    })
-        .catch(function (err) { console.error("Error loading GAPI client for API", err); });
-    
+    var address = $("#geoCode").val().trim();
+    var queryURL = "https://www.googleapis.com/civicinfo/v2/voterinfo?address=" + address +"&key=" + APIkey
 
-        
-        var queryURL = "https://www.googleapis.com/civicinfo/v2/voterinfo?address" + address + APIkey
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+        }).then(function(response) {
+        JSON.stringify(response);
+        // console.log(response);
+        // console.log(response.pollingLocations[0].address.locationName);
+        // console.log(response.pollingLocations[0].address.line1);
+        // console.log(response.pollingLocations[0].address.city);
+        // console.log(response.pollingLocations[0].address.state);
+        // console.log(response.pollingLocations[0].address.zip);
+        // console.log(response.pollingLocations[0].pollingHours);
 
-        $.ajax({
-            url: queryURL,
-            method: "GET"
-            }).then(function(response) {
-            console.log(response);
-        });
+        var tRow = $("<tr>");
+        var location = $("<td>").text(response.pollingLocations[0].address.locationName);
+        var streetAddress = $("<td>").text(response.pollingLocations[0].address.line1);
+        var cityName = $("<td>").text(response.pollingLocations[0].address.city);
+        var stateName = $("<td>").text(response.pollingLocations[0].address.state);
+        var zipCode = $("<td>").text(response.pollingLocations[0].address.zip);
+        var hours = $("<td>").text(response.pollingLocations[0].pollingHours);
+
+        // appends table data to table row
+        tRow.append(location, streetAddress, cityName, stateName, zipCode, hours);
+        // appends table row to table body
+        $("tbody").append(tRow);
+    });
 }
-// Make sure the client is loaded before calling this method.
-function execute() {
-    return gapi.client.civicinfo.voterInfoQuery({})
-        .then(function (response) {
-            // grab value from address input ID
-            console.log("response returned");
-            // event.preventDefault();
-            // Handle the results here (response.result has the parsed body).
-            console.log("Response", response);
-        },
-            function (err) { console.error("Execute error", err); });
-}
-gapi.load("client");
-
-$("#submitButton").on("click", loadClient);
-$("#submitButton").on("click", execute);
-
-
-
-
-
-// $("#submitButton").on("click", function(event){
-//     event.preventDefault();
-//     console.log("submit button clicked");
-//     loadClient();
-//     execute();
-// });
-
-
+$("#submitButton").on("click", function(event){
+    event.preventDefault();
+    loadClient();
+});
