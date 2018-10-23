@@ -7,7 +7,7 @@ function loadClient() {
         url: queryURL,
         method: "GET"
         }).then(function(response) {
-        JSON.stringify(response);
+        // JSON.stringify(response);
         // console.log(response);
         // console.log(response.pollingLocations[0].address.locationName);
         // console.log(response.pollingLocations[0].address.line1);
