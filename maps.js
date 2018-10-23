@@ -2,6 +2,7 @@
 
 //CENTERED MAP AROUND CHICAGO 
 console.log("hello");
+
 function initMap() {
   console.log("centered map");
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -27,6 +28,8 @@ function initMap() {
         var marker = new google.maps.Marker({
           map: resultsMap,
           position: results[0].geometry.location
+
+    
         });
       } else {
         alert('Geocode was not successful for the following reason: ' + status);
