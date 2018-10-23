@@ -34,3 +34,46 @@ $("#submitButton").on("click", function(event){
     event.preventDefault();
     loadClient();
 });
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//get address form
+var addressForm = $("#address-form");
+
+//listen for submit
+// $("#submitButton").on("click", geocode);
+
+function geocode(){
+    //prevent the submit
+    // event.preventDefault();
+
+    var location = $("#geoCode").val();
+    axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
+        params: {
+            address: location,
+            key: 'AIzaSyAUJHBoYX51fGmAfp6vKcVMxbNtQFPExZc'
+        }
+    })
+    .then(function(response){
+        //geometry (long and lat)
+        var lat = response.data.results[0].geometry.location.lat;
+        var lng = response.data.results[0].geometry.location.lng;
+        var geometryOutput = 
+        `
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Latitude</strong>: ${lat}</li>
+                <li class="list-group-item"><strong>Longitude</strong>: ${lng}</li>
+            </ul>
+        `;
+
+    //output to app
+    $("#geometry").html(geometryOutput);
+    console.log(lat);
+    console.log(lng);
+})
+}
+
+$("#submitButton").on("click", function(event){
+    event.preventDefault();
+    geocode();
+});
