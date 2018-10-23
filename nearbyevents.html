@@ -122,11 +122,31 @@
         //   console.log(response);
         //     var contentString = response;
 
-        var contentString = "fbrfbskjnd";
+        // var popUpPolling = <h1>This is your polling place" </h1>;
+        // var event1 = "Autumn Corn Maze";
+        // var event2 = "Fall Pop Up in the Square";
+        // var event3 = "Community Farmers Market";
+        // var event4 = "Taco Tuesday at Bar Tacoma";
+        // var event5 = "Tequila Tuesday at Montgomery's";
 
-        var infowindow = new google.maps.InfoWindow({
-          content: contentString
-        });
+        // var polling =  new google.maps.InfoWindow({
+        //   content: popUpPolling
+        // });
+        // var cornMaze = new google.maps.InfoWindow({
+        //   content: event1
+        // });
+        // var popUp = new google.maps.InfoWindow({
+        //   content: event2
+        // });
+        // var farmersMarket = new google.maps.InfoWindow({
+        //   content: event3
+        // });
+        // var taco = new google.maps.InfoWindow({
+        //   content: event4
+        // });
+        // var tequila = new google.maps.InfoWindow({
+        //   content: event5
+        // });
 
 
         var marker = new google.maps.Marker({
@@ -136,13 +156,19 @@
           icon: 'http://maps.google.com/mapfiles/ms/icons/purple-dot.png',
 
         });
+        // marker.addListener('click', function() {
+        //   cornMaze.open(map, marker);
+        // });
         var marker2 = new google.maps.Marker({
           position: myLatLng2,
           map: map,
           title: 'event 2',
           icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
 
-        });
+       });
+        // marker.addListener('click', function() {
+        //   popUp.open(map, marker);
+        // });
         var marker3 = new google.maps.Marker({
           position: myLatLng3,
           map: map,
@@ -150,6 +176,9 @@
           icon: 'http://maps.google.com/mapfiles/ms/icons/orange-dot.png',
 
         });
+        // marker.addListener('click', function() {
+        //   farmersMarket.open(map, marker);
+        // });
         var marker4 = new google.maps.Marker({
           position: myLatLng4,
           map: map,
@@ -157,6 +186,8 @@
           icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
 
         });
+        // marker.addListener('click', function() {
+        //   taco.open(map, marker);
         var marker5 = new google.maps.Marker({
           position: myLatLng5,
           map: map,
@@ -164,6 +195,8 @@
           icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
 
         });
+        // marker.addListener('click', function() {
+        //   tequila.open(map, marker);
         var pollingPlace = new google.maps.Marker({
           position: pollingPlace,
           map: map,
@@ -171,12 +204,13 @@
           icon: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
 
 
+        // });
+        // marker.addListener('click', function() {
+        //   polling.open(map, marker);
+   
         });
-        marker.addListener('click', function () {
-          infowindow.open(map, marker);
-        });
+        
       }
-
     </script>
 
     <br>
