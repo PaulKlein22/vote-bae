@@ -36,6 +36,10 @@
             </ul>
         </div>
     </div>
+    <br>
+    <h3>Here's the current temp! Dress accordingly, voter!</h3>
+    <div class="temp" id="temp"></div>
+    <br>
     <div class="my-container">
 
         <H3>Events Near Your Polling Place:</H3>
@@ -66,8 +70,9 @@
     <H4 id="myEvent"></H4>
     <ul>Vote!!</ul>
     <div id="myEvents"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
 
-    <script>
 
         function listAdd(Item) {
             var yourEvent = Item;
@@ -75,6 +80,24 @@
             $("#myEvents").append(display);
         }
 
+        var APIKey = "166a433c57516f51dfab1f7edaed8413";
+        var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
+            "q=Chicago,Illinois&units=imperial&appid=" + APIKey;
+
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        })
+           
+            .then(function (response) {
+
+                console.log(queryURL);
+              
+                console.log(response);
+                $(".temp").text("Temperature (F) " + response.main.temp);
+                // Log the data in the console as well
+                console.log("Temperature (F): " + response.main.temp);
+            });
 
     </script>
 
