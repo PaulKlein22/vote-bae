@@ -24,17 +24,17 @@ $("#submitButton").on("click", function (event) {
     console.log(email)
   
 
-    var name = {
+    var userInfo = {
         name: name,
         geoCode: geoCode,
         email: email,
     };
 
-    console.log(name);
+    console.log(userInfo);
 
-    database.ref().push(name);
-    database.ref().push(geoCode);
-    database.ref().push(email);
+    database.ref().push(userInfo);
+    // database.ref().push(geoCode);
+    // database.ref().push(email);
 
-    console.log(name.name);
+    // console.log(name.name);
 });
