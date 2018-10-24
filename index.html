@@ -56,11 +56,8 @@
                 <h5 class="card-title">Enter your information so we can find your polling place!</h5>
                 <form action="nearbyevents.html" method="get">
 
-                    <!-- <div class="form-row">
-                    <div class="form-group col-sm-12 col-med-12 col-lg-12"> -->
-
                     <div class="row">
-                        <div class="col-md-12 text-center">
+                        <div class="form-group col-sm-12 col-med-12 col-lg-12">
                             <label for="nameInput">Name:</label>
                             <input type="text" class="form-control" id="nameInput" placeholder="Your Name" required>
                         </div>
@@ -346,10 +343,9 @@
                                     <p class="card-text">Kid-friendly corn maze set up through November 30th! Come walk
                                         the maze, buy pumpkins or have some tasty apple cider. All ages welcome,
                                         children under 13 must be accompanied by an adult inside the maze.</p>
+                                    <button type="button" name="" onclick="listAdd('Autumn Corn Maze')">Add to your
+                                        list</button>
                                 </div>
-                                <ul class="list-group list-group-flush">
-
-                                </ul>
                             </div>
                         </div>
                         <div class="column-sm-6">
@@ -358,156 +354,162 @@
                                 <div class="card-body">
                                     <h4 class="card-title">Fall Pop up in the Square </h4>
                                     <h5>11:00 am - 3:00 pm</h5>
-                                    <p class="card-text">The Fall pop up is back by popular demand! Come peruse street
+                                    <p class="card-text">The Fall pop up is back by popular demand! Come peruse
+                                        street
                                         vendors for local art, jewelry and home wares in the square. Dog friendly.
                                         Musical acts vary daily.</p>
+                                    <button type="button" name="" onclick="listAdd('Fall Pop up in the Square')">Add
+                                        to your list </button>
                                 </div>
-                                <ul class="list-group list-group-flush">
-
-                                </ul>
-
                             </div>
                         </div>
                     </div>
-                    <div class="eventcard3" style="width: 18rem;">
-                        <img class="card-img-top" src="./assets/farmers.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Community Farmers' Market </h4>
-                            <h5>7:00 am - 12:00 pm</h5>
-                            <p class="card-text">Stalls will be ready and stocked with beautiful autumn produce.
-                                Contact admin Matt for information on securing a market stand. Support Chicago! Buy
-                                local! </p>
+                    <div class="row">
+                        <div class="column-sm-6">
+                            <div class="eventcard3" style="width: 18rem;">
+                                <img class="card-img-top" src="./assets/farmers.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Community Farmers' Market </h4>
+                                    <h5>7:00 am - 12:00 pm</h5>
+                                    <p class="card-text">Stalls will be ready and stocked with beautiful autumn
+                                        produce.
+                                        Contact admin Matt for information on securing a market stand. Support
+                                        Chicago! Buy
+                                        local! </p>
+                                    <button type="button" name="" onclick='listAdd("Community Famers Market")'>Add to
+                                        your list </button>
+                                </div>
+                            </div>
                         </div>
-                        <ul class="list-group list-group-flush">
-
-                        </ul>
-                        <div class="card-body">
-                        </div>
-
-                    </div>
-                    <div class="eventcard4" style="width: 18rem;">
-                        <img class="card-img-top" src="./assets/tacos.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Taco Tuesday at Bar Tacoma </h4>
-                            <h5>4:00 pm - 9:00 pm</h5>
-                            <p class="card-text">Stop in for $2 tacos and %20 off appetisers! We know have been craving
-                                some of our table-side crafted guacamole. See you there!</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-
-                        </ul>
-                        <div class="card-body">
-                        </div>
-
-                    </div>
-                    <div class="eventcard5" style="width: 18rem;">
-                        <img class="card-img-top" src="./assets/tequila.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Tequila Tuesday at Montgomery's </h4>
-                            <h5>8:00 pm - 2:00 am</h5>
-                            <p class="card-text">Montgomery's classic Tequila Tuesday is running every Tuesday with $5
-                                Tequila shots, $3 Coronas. No cover admission at the door.</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-
-                        </ul>
-                        <div class="card-body">
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUJHBoYX51fGmAfp6vKcVMxbNtQFPExZc&callback=initMap">
-                </script>
-            </div>
-            <div id="voteday">
-
-                <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-                    <title>My Voting Day</title>
-                    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-                        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-                    <link rel="stylesheet" href="style.css">
-                    <link href="https://fonts.googleapis.com/css?family=Nova+Round" rel="stylesheet">
-                </head>
-
-
-                <body id="body">
-                    <div class="card text-center">
-                        <div class="card-header">
-                            <ul class="nav nav-tabs card-header-tabs">
-                                <li class="nav-events">
-                                    <img src="./assets/VoteBae.jpg" width="80" href="index.html" height="80" alt="">
-                                    </a>
-                                </li>
-                                <li class="nav-events">
-                                    <a class="nav-link" href="index.html">Home</a>
-                                </li>
-
-                                <li class="nav-events">
-                                    <a class="nav-link" href="nearbyevents.html">Nearby
-                                        Events</a>
-                                </li>
-                                <li class="nav-events">
-                                    <a class="nav-link active" href="#">Plan My Vote
-                                        Day</a>
-                                </li>
-                            </ul>
+                        <div class="column-sm-6">
+                            <div class="eventcard4" style="width: 18rem;">
+                                <img class="card-img-top" src="./assets/tacos.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Taco Tuesday at Bar Tacoma </h4>
+                                    <h5>4:00 pm - 9:00 pm</h5>
+                                    <p class="card-text">Stop in for $2 tacos and %20 off appetisers! We know have
+                                        been
+                                        craving some of our table-side crafted guacamole. See you there!</p>
+                                    <button type="button" name="" onclick="listAdd('Taco Tuesday at Bar Tacoma')">Add
+                                        to your list </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="my-container">
+                    <div class="row">
+                        <div class="column-sm-6">
+                            <div class="eventcard5" style="width: 18rem;">
+                                <img class="card-img-top" src="./assets/tequila.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Tequila Tuesday at Montgomery's </h4>
+                                    <h5>8:00 pm - 2:00 am</h5>
+                                    <p class="card-text">Montgomery's classic Tequila Tuesday is running every
+                                        Tuesday with
+                                        $5 Tequila shots, $3 Coronas. No cover admission at the door.</p>
+                                    <button type="button" name="" onclick="listAdd('Tequila Tuesday at Montgomerys')">Add
+                                        to your list </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column-sm-6">
 
-                        <H3>Events Near Your Polling Place:</H3>
-                        <div>
-                            <div id="yourEvent">Autumn Corn Maze</div>
-                            <td><button type="button" name="" onclick="listAdd('Autumn Corn Maze')">Add to your
-                                    list
-                                </button>
                         </div>
-                        <div>
-                            <div id="yourEvent">Fall Pop up in the Square</div>
-                            <td><button type="button" name="" onclick="listAdd('Fall Pop up in the Square')">Add to
-                                    your list </button>
-                        </div>
-                        <div>
-                            <div id="yourEvent">Community Famers' Market</div>
-                            <td><button type="button" name="" onclick='listAdd("Community Famers Market")'>Add to
-                                    your
-                                    list </button>
-                        </div>
-                        <div>
-                            <div id="yourEvent">Taco Tuesday at Bar Tacoma</div>
-                            <td><button type="button" name="" onclick="listAdd('Taco Tuesday at Bar Tacoma')">Add
-                                    to
-                                    your list </button>
-                        </div>
-                        <div>
-                            <div id="yourEvent">Tequila Tuesday at Montgomery's</div>
-                            <td><button type="button" name="" onclick="listAdd('Tequila Tuesday at Montgomerys')">Add
-                                    to your list
-                                </button>
-                        </div>
-
                     </div>
-                    <br><br>
-                    <h3>Your Voting To-Do List:</h3>
-                    <ul>Vote!!</ul>
-                    <div id="myEvents"></div>
 
-                    <script>
 
-                        function listAdd(Item) {
-                            var yourEvent = Item;
-                            var display = "<ul>" + yourEvent + "</ul>";
-                            $("#myEvents").append(display);
-                        }
+                    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUJHBoYX51fGmAfp6vKcVMxbNtQFPExZc&callback=initMap">
                     </script>
+                </div>
+                <div id="voteday">
 
-                </body>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                        <title>My Voting Day</title>
+                        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+                            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+                            crossorigin="anonymous">
+                        <link rel="stylesheet" href="style.css">
+                        <link href="https://fonts.googleapis.com/css?family=Nova+Round" rel="stylesheet">
+                    </head>
+
+
+                    <body id="body">
+                        <div class="card text-center">
+                            <div class="card-header">
+                                <ul class="nav nav-tabs card-header-tabs">
+                                    <li class="nav-events">
+                                        <img src="./assets/VoteBae.jpg" width="80" href="index.html" height="80" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="nav-events">
+                                        <a class="nav-link" href="index.html">Home</a>
+                                    </li>
+
+                                    <li class="nav-events">
+                                        <a class="nav-link" href="nearbyevents.html">Nearby
+                                            Events</a>
+                                    </li>
+                                    <li class="nav-events">
+                                        <a class="nav-link active" href="#">Plan My Vote
+                                            Day</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="my-container">
+
+                            <H3>Events Near Your Polling Place:</H3>
+                            <div>
+                                <div id="yourEvent">Autumn Corn Maze</div>
+                                <td><button type="button" name="" onclick="listAdd('Autumn Corn Maze')">Add
+                                        to
+                                        your
+                                        list
+                                    </button>
+                            </div>
+                            <div>
+                                <div id="yourEvent">Fall Pop up in the Square</div>
+                                <td><button type="button" name="" onclick="listAdd('Fall Pop up in the Square')">Add
+                                        to
+                                        your list </button>
+                            </div>
+                            <div>
+                                <div id="yourEvent">Community Famers' Market</div>
+                                <td><button type="button" name="" onclick='listAdd("Community Famers Market")'>Add
+                                        to
+                                        your list </button>
+                            </div>
+                            <div>
+                                <div id="yourEvent">Taco Tuesday at Bar Tacoma</div>
+                                <td><button type="button" name="" onclick="listAdd('Taco Tuesday at Bar Tacoma')">Add
+                                        to
+                                        your list </button>
+                            </div>
+                            <div>
+                                <div id="yourEvent">Tequila Tuesday at Montgomery's</div>
+                                <td><button type="button" name="" onclick="listAdd('Tequila Tuesday at Montgomerys')">Add
+                                        to your list </button>
+                            </div>
+
+                        </div>
+                        <br><br>
+                        <h3>Your Voting To-Do List:</h3>
+                        <ul>Vote!!</ul>
+                        <div id="myEvents"></div>
+
+                        <script>
+
+                            function listAdd(Item) {
+                                var yourEvent = Item;
+                                var display = "<ul>" + yourEvent + "</ul>";
+                                $("#myEvents").append(display);
+                            }
+                        </script>
+
+                    </body>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 </html>
 </script>
