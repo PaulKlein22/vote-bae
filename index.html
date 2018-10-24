@@ -6,82 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>VoteBae</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nova+Round" rel="stylesheet">
 </head>
 
 <body>
-<div id="index">
+    <div id="index">
 
-    <div class="card text-center">
-        <div class="card-header">
-            <ul class="nav nav-tabs card-header-tabs">
-                <li class="nav-item">
-                    <img src="./assets/VoteBae.jpg" width="80" href="index.html" height="80" alt="">
+        <div class="card text-center">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <img src="./assets/VoteBae.jpg" width="80" href="index.html" height="80" alt="">
 
-                    </a>
-                </li>
+                        </a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="nearbyevents.html">Nearby
-                        Events</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="planmyvoteday.html">Plan
-                        My Voting
-                        Day</a>
-                </li>
-            </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nearbyevents.html">Nearby
+                            Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="planmyvoteday.html">Plan
+                            My Voting
+                            Day</a>
+                    </li>
+                </ul>
 
-        </div>
+            </div>
 
-        <div class="card-body" id="welcomeText">
+            <div class="card-body" id="welcomeText">
 
-            <h5 class="card-title">Welcome to Vote Bae</h5>
-            <p class="card-text"> We want to help you get the most of your voting day. Of course, we already know you'll be heading to the polls, but what else is on the to-do?
-                <br> Let's take a look 👀<br> We can turn your voting day into a voting YAY in no time!
-            </p>
+                <h5 class="card-title">Welcome to Vote Bae</h5>
+                <p class="card-text"> We want to help you get the most of your voting day. Of course, we already know
+                    you'll be heading to the polls, but what else is on the to-do?
+                    <br> Let's take a look 👀<br> We can turn your voting day into a voting YAY in no time!
+                </p>
 
-        </div>
+            </div>
 
-        <div class="card-body" id="voterDiv">
-            <h5 class="card-title">Enter your information so we can find your polling place!</h5>
-            <form action="nearbyevents.html" method="get">
+            <div class="card-body" id="voterDiv">
+                <h5 class="card-title">Enter your information so we can find your polling place!</h5>
+                <form action="nearbyevents.html" method="get">
 
-                <!-- <div class="form-row">
+                    <!-- <div class="form-row">
                     <div class="form-group col-sm-12 col-med-12 col-lg-12"> -->
 
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <label for="nameInput">Name:</label>
-                        <input type="name" class="form-control" id="nameInput" placeholder="Your Name">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <label for="nameInput">Name:</label>
+                            <input type="text" class="form-control" id="nameInput" placeholder="Your Name" required>
+                        </div>
+
+                        <div class="form-group col-sm-12 col-med-12 col-lg-12">
+                            <label for="geoCode">Enter your street address:</label>
+                            <input type="text" class="form-control" id="geoCode" placeholder="Street Address" required>
+                        </div>
+
+                        <div class="form-group col-sm-12 col-med-12 col-lg-12">
+                            <label for="inputEmail4">Enter your email address:</label>
+                            <input type="email" class="form-control" id="emailInput" placeholder="Email Address"
+                                required>
+                        </div>
                     </div>
 
-                    <div class="form-group col-sm-12 col-med-12 col-lg-12">
-                        <label for="geoCode">Enter your street address:</label>
-                        <input type="text" class="form-control" id="geoCode" placeholder="Street Address">
-                    </div>
-
-                    <div class="form-group col-sm-12 col-med-12 col-lg-12">
-                        <label for="inputEmail4">Enter your email address:</label>
-                        <input type="email" class="form-control" id="emailInput" placeholder="Email Address">
-                    </div>
-                </div>
-                <div class="row">
                     <div class="col-md-12 text-center">
-                        <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+                        <button type="submit" class="btn btn-primary" id="submitButton" value="Send Request">Submit</button>
+
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
+
         </div>
-
-    </div>
 
     </div>
     <script src="https://apis.google.com/js/api.js"></script>
@@ -94,8 +97,8 @@
     <script src=js\name.js></script>
 
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('.menu').click(function() {
+        $(document).ready(function () {
+            $('.menu').click(function () {
                 $('ul').toggleClass('active');
 
             })
@@ -110,94 +113,407 @@
             })
         })
         // $(document).getElementById("nameInput")
-        
+
     </script>
-   
-</div>
-<div id="voteday">
+
+    </div>
+    <div id="planmyday">
+
         <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <meta http-equiv="X-UA-Compatible" content="ie=edge">
-                <title>My Voting Day</title>
-                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-                    crossorigin="anonymous">
-                <link rel="stylesheet" href="style.css">
-                <link href="https://fonts.googleapis.com/css?family=Nova+Round" rel="stylesheet">
-            </head>
-            
-            
-            <body id="body">
-                <div class="card text-center">
-                    <div class="card-header">
-                        <ul class="nav nav-tabs card-header-tabs">
-                            <li class="nav-events">
-                                <img src="./assets/VoteBae.jpg" width="80" href="index.html" height="80" alt="">
-                                </a>
-                            </li>
-                            <li class="nav-events">
-                                <a class="nav-link" href="index.html">Home</a>
-                            </li>
-            
-                            <li class="nav-events">
-                                <a class="nav-link" href="nearbyevents.html">Nearby
-                                    Events</a>
-                            </li>
-                            <li class="nav-events">
-                                <a class="nav-link active" href="#">Plan My Vote
-                                    Day</a>
-                            </li>
-                        </ul>
-                    </div>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+                integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+            <!-- <link rel="stylesheet" href="maps.css"> -->
+            <link rel="stylesheet" href="style.css">
+            <link href="https://fonts.googleapis.com/css?family=Nova+Round" rel="stylesheet">
+            <style>
+                #map {
+        height: 400px;
+        width: 50%;
+        margin: auto;
+        background-image: url("./assets/starsback.jpg");
+      }
+  
+      .card {
+        background-image: url("./assets/starsback.jpg");
+      }
+  
+      #events {
+        width: 50%;
+        margin: auto;
+      }
+    </style>
+
+            <title>Events</title>
+        </head>
+
+        <body>
+            <div class="card text-center">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a><img src="./assets/VoteBae.jpg" width="80" href="index.html" height="80" alt="">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Nearby Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="planmyvoteday.html">Plan
+                                My Vote
+                                Day</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="my-container">
-            
-                    <H3>Events Near Your Polling Place:</H3>
-                    <div>
-                        <div id="yourEvent">Autumn Corn Maze</div>
-                        <td><button type="button" name="" onclick="listAdd('Autumn Corn Maze')">Add to your list </button>
-                    </div>
-                    <div>
-                        <div id="yourEvent">Fall Pop up in the Square</div>
-                        <td><button type="button" name="" onclick="listAdd('Fall Pop up in the Square')">Add to your list </button>
-                    </div>
-                    <div>
-                        <div id="yourEvent">Community Famers' Market</div>
-                        <td><button type="button" name="" onclick='listAdd("Community Famers Market")'>Add to your list </button>
-                    </div>
-                    <div>
-                        <div id="yourEvent">Taco Tuesday at Bar Tacoma</div>
-                        <td><button type="button" name="" onclick="listAdd('Taco Tuesday at Bar Tacoma')">Add to your list </button>
-                    </div>
-                    <div>
-                        <div id="yourEvent">Tequila Tuesday at Montgomery's</div>
-                        <td><button type="button" name="" onclick="listAdd('Tequila Tuesday at Montgomerys')">Add to your list
-                            </button>
-                    </div>
-            
-                </div>
+
                 <br><br>
-                <h3>Your Voting To-Do List:</h3>
-                <ul>Vote!!</ul>
-                <div id="myEvents"></div>
-            
+                <div id="map"></div>
                 <script>
-            
-                    function listAdd(Item) {
-                        var yourEvent = Item;
-                        var display = "<ul>" + yourEvent + "</ul>";
-                        $("#myEvents").append(display);
+
+
+                    //CENTERED MAP AROUND LA 
+                    console.log("hello");
+                    function initMap() {
+                        console.log("centered map");
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 13,
+                            center: { lng: -118.467372, lat: 34.073661 }
+                        });
+                        var geocoder = new google.maps.Geocoder();
+
+                        document.getElementById('map').addEventListener('click', function () {
+                            geocodeAddress(geocoder, map);
+                        });
+
+                        //GEOCODE ADDRESS 
+                        console.log("here")
+
+                        function geocodeAddress(geocoder, resultsMap) {
+                            console.log("geoCode")
+
+                            var address = document.getElementById('address').value;
+                            console.log('address');
+                            geocoder.geoCode({ 'address': address }, function (results, status) {
+                                if (status === 'OK') {
+                                    console.log("stauts ok")
+                                    resultsMap.setCenter(results[0].geometry.location);
+                                    var marker = new google.maps.Marker({
+                                        map: resultsMap,
+                                        position: results[0].geometry.location
+                                    });
+                                } else {
+                                    console.log('Geocode was not successful for the following reason: ' + status);
+                                }
+                            });
+                        }
+
+                        //CTA LAYER 
+
+                        var transitLayer = new google.maps.TransitLayer();
+                        transitLayer.setMap(map);
+
+
+
+                        //EVENT MARKERS 
+
+                        console.log("event");
+                        var myLatLng = { lat: 34.074016, lng: -118.464304 };
+                        var myLatLng2 = { lat: 34.060403, lng: -118.458310 };
+                        var myLatLng3 = { lat: 34.068259, lng: -118.443221 };
+                        var myLatLng4 = { lat: 34.061212, lng: -118.468482 };
+                        var myLatLng5 = { lat: 34.069841, lng: -118.455283 };
+                        var pollingPlace = { lat: 34.072988, lng: -118.468685 };
+                        //  var APIKey = "AIzaSyDaojct9_XgY_XfEgjZ8LTZOaFyk_mJEDc";
+                        // var queryURL = "https://www.googleapis.com/civicinfo/v2/voterinfo" + APIKey ;
+                        //      $.ajax({
+                        //    url: queryURL,
+                        //     method: "GET"
+                        //     }).then(function(response) {
+                        //     console.log(queryURL); 
+                        //   console.log(response);
+                        //     var contentString = response;
+
+                        // var popUpPolling = <h1>This is your polling place" </h1>;
+                        // var event1 = "Autumn Corn Maze";
+                        // var event2 = "Fall Pop Up in the Square";
+                        // var event3 = "Community Farmers Market";
+                        // var event4 = "Taco Tuesday at Bar Tacoma";
+                        // var event5 = "Tequila Tuesday at Montgomery's";
+
+                        // var polling =  new google.maps.InfoWindow({
+                        //   content: popUpPolling
+                        // });
+                        // var cornMaze = new google.maps.InfoWindow({
+                        //   content: event1
+                        // });
+                        // var popUp = new google.maps.InfoWindow({
+                        //   content: event2
+                        // });
+                        // var farmersMarket = new google.maps.InfoWindow({
+                        //   content: event3
+                        // });
+                        // var taco = new google.maps.InfoWindow({
+                        //   content: event4
+                        // });
+                        // var tequila = new google.maps.InfoWindow({
+                        //   content: event5
+                        // });
+
+
+                        var marker = new google.maps.Marker({
+                            position: myLatLng,
+                            map: map,
+                            title: 'event 1',
+                            icon: 'http://maps.google.com/mapfiles/ms/icons/purple-dot.png',
+
+                        });
+                        // marker.addListener('click', function() {
+                        //   cornMaze.open(map, marker);
+                        // });
+                        var marker2 = new google.maps.Marker({
+                            position: myLatLng2,
+                            map: map,
+                            title: 'event 2',
+                            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+
+                        });
+                        // marker.addListener('click', function() {
+                        //   popUp.open(map, marker);
+                        // });
+                        var marker3 = new google.maps.Marker({
+                            position: myLatLng3,
+                            map: map,
+                            title: 'event 3',
+                            icon: 'http://maps.google.com/mapfiles/ms/icons/orange-dot.png',
+
+                        });
+                        // marker.addListener('click', function() {
+                        //   farmersMarket.open(map, marker);
+                        // });
+                        var marker4 = new google.maps.Marker({
+                            position: myLatLng4,
+                            map: map,
+                            title: 'event 4',
+                            icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+
+                        });
+                        // marker.addListener('click', function() {
+                        //   taco.open(map, marker);
+                        var marker5 = new google.maps.Marker({
+                            position: myLatLng5,
+                            map: map,
+                            title: 'event 5',
+                            icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
+
+                        });
+                        // marker.addListener('click', function() {
+                        //   tequila.open(map, marker);
+                        var pollingPlace = new google.maps.Marker({
+                            position: pollingPlace,
+                            map: map,
+                            title: 'Polling Place',
+                            icon: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
+
+
+                        });
+                        // marker.addListener('click', function() {
+                        //   polling.open(map, marker);
+
+                        // });
+
                     }
                 </script>
-            
-            </body>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-            
-            </html>
-            </script>
+
+                <br>
+                <br>
+
+                <H2>Events Near Your Polling Place:</H2>
+                <div class="container">
+                    <div class="row">
+                        <div class="column-sm-6">
+                            <div class="eventcard1" style="width: 18rem;">
+                                <img class="card-img-top" src="./assets/corn.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Autumn Corn Maze</h4>
+                                    <h5>1:00 pm - 7:00 pm</h5>
+                                    <p class="card-text">Kid-friendly corn maze set up through November 30th! Come walk
+                                        the maze, buy pumpkins or have some tasty apple cider. All ages welcome,
+                                        children under 13 must be accompanied by an adult inside the maze.</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column-sm-6">
+                            <div class="eventcard2" style="width: 18rem;">
+                                <img class="card-img-top" src="./assets/fallpop.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Fall Pop up in the Square </h4>
+                                    <h5>11:00 am - 3:00 pm</h5>
+                                    <p class="card-text">The Fall pop up is back by popular demand! Come peruse street
+                                        vendors for local art, jewelry and home wares in the square. Dog friendly.
+                                        Musical acts vary daily.</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="eventcard3" style="width: 18rem;">
+                        <img class="card-img-top" src="./assets/farmers.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Community Farmers' Market </h4>
+                            <h5>7:00 am - 12:00 pm</h5>
+                            <p class="card-text">Stalls will be ready and stocked with beautiful autumn produce.
+                                Contact admin Matt for information on securing a market stand. Support Chicago! Buy
+                                local! </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+
+                        </ul>
+                        <div class="card-body">
+                        </div>
+
+                    </div>
+                    <div class="eventcard4" style="width: 18rem;">
+                        <img class="card-img-top" src="./assets/tacos.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Taco Tuesday at Bar Tacoma </h4>
+                            <h5>4:00 pm - 9:00 pm</h5>
+                            <p class="card-text">Stop in for $2 tacos and %20 off appetisers! We know have been craving
+                                some of our table-side crafted guacamole. See you there!</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+
+                        </ul>
+                        <div class="card-body">
+                        </div>
+
+                    </div>
+                    <div class="eventcard5" style="width: 18rem;">
+                        <img class="card-img-top" src="./assets/tequila.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Tequila Tuesday at Montgomery's </h4>
+                            <h5>8:00 pm - 2:00 am</h5>
+                            <p class="card-text">Montgomery's classic Tequila Tuesday is running every Tuesday with $5
+                                Tequila shots, $3 Coronas. No cover admission at the door.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+
+                        </ul>
+                        <div class="card-body">
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUJHBoYX51fGmAfp6vKcVMxbNtQFPExZc&callback=initMap">
+                </script>
             </div>
-        
+            <div id="voteday">
+
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                    <title>My Voting Day</title>
+                    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+                        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+                    <link rel="stylesheet" href="style.css">
+                    <link href="https://fonts.googleapis.com/css?family=Nova+Round" rel="stylesheet">
+                </head>
+
+
+                <body id="body">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <ul class="nav nav-tabs card-header-tabs">
+                                <li class="nav-events">
+                                    <img src="./assets/VoteBae.jpg" width="80" href="index.html" height="80" alt="">
+                                    </a>
+                                </li>
+                                <li class="nav-events">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+
+                                <li class="nav-events">
+                                    <a class="nav-link" href="nearbyevents.html">Nearby
+                                        Events</a>
+                                </li>
+                                <li class="nav-events">
+                                    <a class="nav-link active" href="#">Plan My Vote
+                                        Day</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="my-container">
+
+                        <H3>Events Near Your Polling Place:</H3>
+                        <div>
+                            <div id="yourEvent">Autumn Corn Maze</div>
+                            <td><button type="button" name="" onclick="listAdd('Autumn Corn Maze')">Add to your
+                                    list
+                                </button>
+                        </div>
+                        <div>
+                            <div id="yourEvent">Fall Pop up in the Square</div>
+                            <td><button type="button" name="" onclick="listAdd('Fall Pop up in the Square')">Add to
+                                    your list </button>
+                        </div>
+                        <div>
+                            <div id="yourEvent">Community Famers' Market</div>
+                            <td><button type="button" name="" onclick='listAdd("Community Famers Market")'>Add to
+                                    your
+                                    list </button>
+                        </div>
+                        <div>
+                            <div id="yourEvent">Taco Tuesday at Bar Tacoma</div>
+                            <td><button type="button" name="" onclick="listAdd('Taco Tuesday at Bar Tacoma')">Add
+                                    to
+                                    your list </button>
+                        </div>
+                        <div>
+                            <div id="yourEvent">Tequila Tuesday at Montgomery's</div>
+                            <td><button type="button" name="" onclick="listAdd('Tequila Tuesday at Montgomerys')">Add
+                                    to your list
+                                </button>
+                        </div>
+
+                    </div>
+                    <br><br>
+                    <h3>Your Voting To-Do List:</h3>
+                    <ul>Vote!!</ul>
+                    <div id="myEvents"></div>
+
+                    <script>
+
+                        function listAdd(Item) {
+                            var yourEvent = Item;
+                            var display = "<ul>" + yourEvent + "</ul>";
+                            $("#myEvents").append(display);
+                        }
+                    </script>
+
+                </body>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</html>
+</script>
+</div>
+
 </div>
 </body>
-        
+
 </html>
