@@ -84,6 +84,11 @@ nav {
     margin-left: 300px;
 }
 
+#welcome-title {
+    font-size: 65px;
+    font-weight: 800;
+}
+
 body,
 #body {
     margin: 0;
@@ -92,6 +97,22 @@ body,
     font-family: 'Nova Round', cursive;
     color: white;
     
+}
+
+#map {
+    height: 400px;
+    width: 50%;
+    margin: auto;
+    background-image: url("./assets/starsback.jpg");
+}
+
+.card {
+    background-image: url("./assets/starsback.jpg");
+}
+
+#events {
+    width: 50%;
+    margin: auto;
 }
 
 nav {
