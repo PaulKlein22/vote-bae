@@ -29,7 +29,7 @@ $("#submitButton").on("click", function (event) {
     $("#myEvent").text(localStorage.getItem("name"));
     console.log(username);
 
-    $("#myEvent").text("Voting Day");
+    $("#myEvent").text(username + "'s Voting Day");
 });
 
 // By default (upon load) show the name stored in localStorage using "localStorage.getItem"
