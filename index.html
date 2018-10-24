@@ -13,7 +13,7 @@
 </head>
 
 <body>
-
+<div id="index">
 
     <div class="card text-center">
         <div class="card-header">
@@ -110,6 +110,92 @@
         })
         // $(document).getElementById("nameInput")
     </script>
+   
+</div>
+<div id="voteday">
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <title>My Voting Day</title>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+                    crossorigin="anonymous">
+                <link rel="stylesheet" href="style.css">
+                <link href="https://fonts.googleapis.com/css?family=Nova+Round" rel="stylesheet">
+            </head>
+            
+            
+            <body id="body">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <ul class="nav nav-tabs card-header-tabs">
+                            <li class="nav-events">
+                                <img src="./assets/VoteBae.jpg" width="80" href="index.html" height="80" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-events">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+            
+                            <li class="nav-events">
+                                <a class="nav-link" href="nearbyevents.html">Nearby
+                                    Events</a>
+                            </li>
+                            <li class="nav-events">
+                                <a class="nav-link active" href="#">Plan My Vote
+                                    Day</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="my-container">
+            
+                    <H3>Events Near Your Polling Place:</H3>
+                    <div>
+                        <div id="yourEvent">Autumn Corn Maze</div>
+                        <td><button type="button" name="" onclick="listAdd('Autumn Corn Maze')">Add to your list </button>
+                    </div>
+                    <div>
+                        <div id="yourEvent">Fall Pop up in the Square</div>
+                        <td><button type="button" name="" onclick="listAdd('Fall Pop up in the Square')">Add to your list </button>
+                    </div>
+                    <div>
+                        <div id="yourEvent">Community Famers' Market</div>
+                        <td><button type="button" name="" onclick='listAdd("Community Famers Market")'>Add to your list </button>
+                    </div>
+                    <div>
+                        <div id="yourEvent">Taco Tuesday at Bar Tacoma</div>
+                        <td><button type="button" name="" onclick="listAdd('Taco Tuesday at Bar Tacoma')">Add to your list </button>
+                    </div>
+                    <div>
+                        <div id="yourEvent">Tequila Tuesday at Montgomery's</div>
+                        <td><button type="button" name="" onclick="listAdd('Tequila Tuesday at Montgomerys')">Add to your list
+                            </button>
+                    </div>
+            
+                </div>
+                <br><br>
+                <h3>Your Voting To-Do List:</h3>
+                <ul>Vote!!</ul>
+                <div id="myEvents"></div>
+            
+                <script>
+            
+                    function listAdd(Item) {
+                        var yourEvent = Item;
+                        var display = "<ul>" + yourEvent + "</ul>";
+                        $("#myEvents").append(display);
+                    }
+                </script>
+            
+            </body>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            
+            </html>
+            </script>
+            </div>
+        
+</div>
 </body>
-
+        
 </html>
