@@ -80,3 +80,24 @@ $("#submitButton").on("click", function(event){
     event.preventDefault();
     geocode();
 });
+
+$(document).ready(function(){
+    $(".first").hide();
+    $(".second").hide();
+
+    $("#submitButton").click(function(){
+        $("#voteSched").hide();
+        // $(".second").show();
+
+    $(".first").show();
+    });
+    
+    });
+
+    // $(document).ready(function(){
+    //     $(".second").hide();
+    //     $("#submitButton").click(function(){
+    //     $(".second").show();
+    //     });
+        
+    //     });
