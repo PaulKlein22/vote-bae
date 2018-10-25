@@ -30,10 +30,13 @@ function loadClient() {
         $("tbody").append(tRow);
     });
 }
-$("#submitButton").on("click", function(event){
-    event.preventDefault();
-    loadClient();
-});
+// $("#submitButton").on("click", function(event){
+//     event.preventDefault();
+//     loadClient();
+// });
+$("#submitButton").click(function () {
+    $("#index").hide("show");
+ });
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
