@@ -99,21 +99,21 @@
                 <div class="column-sm-6">
                     <div class="eventcard1" style="width: 18rem;">
                         <img class="card-img-top" src="./assets/corn.jpg" alt="Card image cap">
-                        <div class="card-body">
+                        <div class="event-body">
                             <h3 class="card-title">Autumn Corn Maze</h3>
                             <h3>1:00 pm - 7:00 pm</h3>
                             <p class="card-text">Kid-friendly corn maze set up through November 30th! Come walk
                                 the maze, buy pumpkins or have some tasty apple cider. All ages welcome, children
                                 under
                                 13 must be accompanied by an adult inside the maze.</p>
-                            <button type="button" name="" onclick="listAdd('Autumn Corn Maze')">Add to your list</button>
+                            <button type="button" id="cornButt">Add to your list</button>
                         </div>
                     </div>
                 </div>
                 <div class="column-sm-6">
                     <div class="eventcard2" style="width: 18rem;">
                         <img class="card-img-top" src="./assets/fallpop.jpg" alt="Card image cap">
-                        <div class="card-body">
+                        <div class="event-body">
                             <h3 class="card-title">Fall Pop up in the Square</h3>
                             <h3>11:00 am - 3:00 pm</h3>
                             <p class="card-text">The Fall pop up is back by popular demand! Come peruse street
@@ -121,7 +121,7 @@
                                 for local art, jewelry and home wares in the square. Dog friendly. Musical acts
                                 vary
                                 daily.</p>
-                            <button type="button" name="" onclick="listAdd('Fall Pop up in the Square')">Add to
+                            <button type="button" name="" id="popupButt">Add to
                                 your
                                 list </button>
                         </div>
@@ -132,14 +132,14 @@
                 <div class="column-sm-6">
                     <div class="eventcard3" style="width: 18rem;">
                         <img class="card-img-top" src="./assets/farmers.jpg" alt="Card image cap">
-                        <div class="card-body">
+                        <div class="event-body">
                             <h3 class="card-title">Community Farmers' Market</h3>
                             <h3>7:00 am - 12:00 pm</h3>
                             <p class="card-text">Stalls will be ready and stocked with beautiful autumn produce.
                                 Contact admin Matt for information on securing a market stand. Support Los Angeles!
                                 Buy
                                 local! </p>
-                            <button type="button" name="" onclick='listAdd("Community Famers Market")'>Add to your
+                            <button type="button" name="" id="farmerButt">Add to your
                                 list
                             </button>
                         </div>
@@ -148,13 +148,13 @@
                 <div class="column-sm-6">
                     <div class="eventcard4" style="width: 18rem;">
                         <img class="card-img-top" src="./assets/tacos.jpg" alt="Card image cap">
-                        <div class="card-body">
+                        <div class="event-body">
                             <h3 class="card-title">Taco Tuesday at Bar Tacoma</h3>
                             <h3>4:00 pm - 9:00 pm</h3>
                             <p class="card-text">Stop in for $2 tacos and %20 off appetisers! We know have been
                                 craving
                                 some of our table-side crafted guacamole. See you there!</p>
-                            <button type="button" name="" onclick="listAdd('Taco Tuesday at Bar Tacoma')">Add to
+                            <button type="button" name="" id="tacoButt">Add to
                                 your
                                 list </button>
                         </div>
@@ -165,13 +165,13 @@
                 <div class="column-sm-6">
                     <div class="eventcard5" style="width: 18rem;">
                         <img class="card-img-top" src="./assets/tequila.jpg" alt="Card image cap">
-                        <div class="card-body">
+                        <div class="event-body">
                             <h3 class="card-title">Tequila Tuesday at Montgomery's</h3>
                             <h3>8:00 pm - 2:00 am</h3>
                             <p class="card-text">Montgomery's classic Tequila Tuesday is running every Tuesday with
                                 $5
                                 Tequila shots, $3 Coronas. No cover admission at the door.</p>
-                            <button type="button" name="" onclick="listAdd('Tequila Tuesday at Montgomerys')">Add
+                            <button type="button" name="" id="tequilaButt">Add
                                 to
                                 your list </button>
                         </div>
@@ -196,6 +196,7 @@
         <div class="midHeading">
             <h2>Your Current Voting Day To-Do List:</h2>
         </div>
+        <br>
 
 
         <div id="myEvents">
@@ -203,6 +204,7 @@
                 <h4>Vote!!</h4>
             </ul>
         </div>
+        <br>
         <div class="col-md-12 text-center">
             <button type="submit" class="btn btn-primary btn-block" id="addSched" value="Send Request">Add More
             </button>
@@ -249,11 +251,31 @@
             });
         });
 
-        function listAdd(Item) {
-            var yourEvent = Item;
-            var display = "<ul>" + yourEvent + "</ul>";
-            $("#myEvents").append(display);
-        }
+        $(document).ready(function () {
+            $("#cornButt").click(function () {
+                var display = "<ul>" + "Autumn Corn Maze" + "</ul>";
+                $("#myEvents").append(display);
+            });
+            $("#PopupButt").click(function () {
+                var display = "<ul>" + "Fall Pop up in the Square" + "</ul>";
+                $("#myEvents").append(display);
+            });
+            $("#farmerButt").click(function () {
+                var display = "<ul>" + "Community Farmers' Market" + "</ul>";
+                $("#myEvents").append(display);
+            });
+            $("#tacoButt").click(function () {
+                var display = "<ul>" + "Taco Tuesday at Bar Tacoma" + "</ul>";
+                $("#myEvents").append(display);
+            });
+
+            $("#tequilaButt").click(function () {
+                var display = "<ul>" + "Tequila Tuesday at Montgomery's" + "</ul>";
+                $("#myEvents").append(display);
+            });
+        });
+
+
 
 
 
@@ -261,8 +283,7 @@
             $('.menu').click(function () {
                 $('ul').toggleClass('active');
             })
-            // var username = "nameInput"
-            // var name = document.getElementById('name').;
+
             $('#submitButton').on('click', function () {
                 console.log(nameInput.value);
             })
