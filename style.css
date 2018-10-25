@@ -7,7 +7,15 @@
 
 .card-body {
     font-family: 'Nova Round', cursive;
-    color: white;
+    color: white;  
+}
+.event-body {
+    width:290px;
+}
+
+.card-img-top {
+    height: 180px;
+    width: 290px;
 }
 
 .card-text {
@@ -32,26 +40,28 @@ h2 {
 
 .eventcard1 {
     background-color: lightblue;
-    height: 480px;
+    height: 530px;
+    margin: 200;
 }
 
 .eventcard2 {
     background-color: lightblue;
-    height: 478.5px;
+    height: 530px;
 }
 
 .eventcard3 {
     background-color: lightblue;
-    height: 510px;
+    height: 520px;
 }
 
 .eventcard4 {
     background-color: lightblue;
-    height: 510px;
+    height: 520px;
 }
 
 .eventcard5 {
     background-color: lightblue;
+    height: 510px;
 }
 
 #submitButton,
@@ -76,8 +86,16 @@ nav {
     border: 0;
     color: white;
 }
-
-
+#voteSched {
+    text-align: center;
+}
+#myEvents {
+    border-style: dashed;
+    border-width: 5px;
+    border-color:#f18585;
+    width: 75%;
+    display: inline-block;
+}
 
 .btn-primary {
     width: 100px;
