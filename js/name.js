@@ -38,3 +38,5 @@ $("#myEvent").text(localStorage.getItem("name"));
 // $("#myEvent").html("Voting Dat" + "name");
 
 
+
+
