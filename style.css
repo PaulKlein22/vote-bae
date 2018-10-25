@@ -1,7 +1,7 @@
 .card-header {
     text-align: center;
     font-size: 18px;
-    background-color: lightblue;
+    background-color: rgb(88, 163, 233);
     color: white;
 }
 
@@ -11,6 +11,7 @@
 }
 .event-body {
     width:290px;
+    text-align:center;
 }
 
 .card-img-top {
@@ -25,11 +26,11 @@
 h4,
 #myEvents {
     display:inline-block;
-    background-color:lightblue;
+    background-color:rgb(88, 163, 233);
 }
 
 h2 {
-    background-color:lightblue;
+    background-color:rgb(88, 163, 233);
     text-align: center;
     margin: 0 auto;
 }
@@ -39,29 +40,37 @@ h2 {
 }
 
 .eventcard1 {
-    background-color: lightblue;
+    background-color: rgb(88, 163, 233);
     height: 530px;
-    margin: 200;
+    margin-left:30px;
+    margin-bottom:20px;
 }
 
 .eventcard2 {
-    background-color: lightblue;
+    background-color: rgb(88, 163, 233);
     height: 530px;
+    margin-left:30px;
 }
 
 .eventcard3 {
-    background-color: lightblue;
+    background-color: rgb(88, 163, 233);
     height: 520px;
+    margin-left:30px;
+    margin-top:20px;
 }
 
 .eventcard4 {
-    background-color: lightblue;
+    background-color: rgb(88, 163, 233);
     height: 520px;
+    margin-left:30px;
+    margin-top:20px;
 }
 
 .eventcard5 {
-    background-color: lightblue;
+    background-color: rgb(88, 163, 233);
     height: 510px;
+    margin-left:30px;
+    margin-top:20px;
 }
 
 #submitButton,
