@@ -198,6 +198,10 @@
 
     <div class="second" id="voteSched">
         <br>
+        <h4>Here's the current temp! Dress accordingly, voter!</h4>
+   <div class="temp" id="temp"></div>
+   <br>
+   <div class="my-container">
         <div class="midHeading">
             <h2 id="myEvent"></h2>
         </div>
@@ -298,7 +302,26 @@
         })
             // $(document).getElementById("nameInput")
 
+var APIKey = "166a433c57516f51dfab1f7edaed8413";
 
+// Here we are building the URL we need to query the database
+var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
+    "q=Chicago,Illinois&units=imperial&appid=" + APIKey;
+$.ajax({
+    url: queryURL,
+    method: "GET"
+})
+    // We store all of the retrieved data inside of an object called "response"
+    .then(function (response) {
+
+        // Log the queryURL
+        console.log(queryURL);
+        // Log the resulting object
+        console.log(response);
+        $(".temp").text("Temperature (F) " + response.main.temp);
+        // Log the data in the console as well
+        console.log("Temperature (F): " + response.main.temp);
+    });
 
 
     </script>
